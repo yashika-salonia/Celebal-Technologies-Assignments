@@ -10,7 +10,6 @@ It highlights hands-on work in data cleaning, preprocessing, and analysis using 
 - Jupyter Notebook
 - VS Code
 
----
 
 ## 📅 Week 1 — Pandas Basics & Data Cleaning
 
