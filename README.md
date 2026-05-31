@@ -44,7 +44,6 @@ Use SQL to analyze sales data, perform aggregations, and understand fundamental 
 - Performed aggregations using `GROUP BY`, `SUM`, `AVG`, and `COUNT`.
 - Analyzed monthly sales trends and top-performing customers/products.
 - Conducted basic data quality checks and duplicate detection.
-- Studied database normalization and relational database design concepts.
 
 ---
 
