@@ -56,7 +56,7 @@ Analyze the Superstore dataset using advanced SQL techniques to extract complex 
 * **Window Functions:** Applied `RANK()`, `DENSE_RANK()`, and `ROW_NUMBER()` for dynamic leaderboards and chronological order sequencing.
 * **Performance Optimization:** Replaced $O(N^2)$ correlated subqueries with optimized derived tables (Uncorrelated Subqueries via `JOIN`) to drastically reduce execution time and prevent database timeouts on large datasets.
 
-### 📅 Week 4 - Azure Cloud Fundamentals & ETL Pipeline
+## 📅 Week 4 - Azure Cloud Fundamentals & ETL Pipeline
 
 **Objective** Build an end-to-end ETL pipeline using Azure Data Factory (ADF) and Azure Blob Storage.
 
