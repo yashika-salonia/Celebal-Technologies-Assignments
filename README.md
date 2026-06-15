@@ -56,5 +56,20 @@ Analyze the Superstore dataset using advanced SQL techniques to extract complex 
 * **Window Functions:** Applied `RANK()`, `DENSE_RANK()`, and `ROW_NUMBER()` for dynamic leaderboards and chronological order sequencing.
 * **Performance Optimization:** Replaced $O(N^2)$ correlated subqueries with optimized derived tables (Uncorrelated Subqueries via `JOIN`) to drastically reduce execution time and prevent database timeouts on large datasets.
 
+### 📅 Week 4 - Azure Cloud Fundamentals & ETL Pipeline
+
+**Objective** Build an end-to-end ETL pipeline using Azure Data Factory (ADF) and Azure Blob Storage.
+
+**Tasks Completed** * Created a Resource Group (`rg-celebal-week4`) for resource management.
+* Configured Azure Storage Account with `input-data` and `output-data` Blob containers.
+* Assigned appropriate IAM roles to ADF Managed Identity for secure storage access.
+* Created an Azure Data Factory instance (`adf-celebal-week4`) with Linked Services and Datasets.
+
+**Pipeline Workflow** * **Get Metadata** activity validates the source CSV file.
+* **Copy Data** activity transfers data from the input container to the output container.
+* Pipeline execution was tested and validated using the ADF Debug feature.
+
+**Outcome** Successfully designed and executed an ETL pipeline that validates and transfers data between Azure Blob Storage containers using Azure Data Factory.
+
 ---
 More weekly tasks and implementations will be added as the internship progresses.
