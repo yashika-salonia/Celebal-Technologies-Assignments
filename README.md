@@ -5,10 +5,11 @@ It highlights hands-on work in data cleaning, preprocessing, and analysis using 
 
 ## 🛠️ Tech Stack
 
-- **Languages:** Python, SQL
+- **Languages:** Python, SQL, PySpark
+- **Big Data & Cloud:** Apache Spark, Azure Data Factory (ADF), Azure Blob Storage
 - **Libraries:** Pandas, NumPy
-- **Tools/Environments:** Jupyter Notebook, VS Code, MySQL Workbench
-- **Databases:** MySQL
+- **Tools/Environments:** Google Colab, Jupyter Notebook, VS Code, MySQL Workbench
+- **Databases & Data Formats:** MySQL, Parquet, CSV
 
 ## 📅 Week 1 — Pandas Basics & Data Cleaning
 
@@ -56,7 +57,7 @@ Analyze the Superstore dataset using advanced SQL techniques to extract complex 
 * **Window Functions:** Applied `RANK()`, `DENSE_RANK()`, and `ROW_NUMBER()` for dynamic leaderboards and chronological order sequencing.
 * **Performance Optimization:** Replaced $O(N^2)$ correlated subqueries with optimized derived tables (Uncorrelated Subqueries via `JOIN`) to drastically reduce execution time and prevent database timeouts on large datasets.
 
-## 📅 Week 4 - Azure Cloud Fundamentals & ETL Pipeline
+## 📅 Week 4 — Azure Cloud Fundamentals & ETL Pipeline
 
 ### Objective 
 
@@ -95,6 +96,24 @@ Implement distributed data processing concepts and build modular PySpark pipelin
 * **Schema Transformation:** Standardized data types by casting raw string formats into proper `TimestampType` columns.
 * **Statistical Analysis:** Computed simultaneous multi-metric aggregations (min, max, mean) using Spark's `.agg()` function.
 * **End-to-End ETL Pipeline:** Built a fully chained, production-grade PySpark pipeline that deduplicates, imputes nulls, and calculates total revenue.
+
+## 📅 Week 6 — Apache Spark Architecture & Advanced Processing
+
+### Objective 
+Understand Spark architecture and build an optimized, end-to-end ETL pipeline using PySpark.
+
+### Work Completed
+* Documented core Spark architecture components (Driver, Cluster Manager, Executors) and execution modes.
+* Generated and configured test datasets in both CSV (row-based) and Parquet (columnar) formats.
+* Applied Spark performance optimizations including Lazy Evaluation, DAG Lineage, and Predicate Pushdown.
+* Initialized a PySpark Session to execute and validate distributed transformations.
+
+### Pipeline Workflow
+* **Read Data** activity loads raw CSV/Parquet files utilizing `inferSchema=True` for dynamic typing.
+* **Transform Data** activity renames columns, casts data types (String to Double), and derives new calculated columns.
+* **Filter Data** activity isolates high-value records and removes rows with null identity values.
+* **Write Data** activity exports the cleaned and processed DataFrame to a target destination.
+* Pipeline exploration was safely tested and validated using `.show()` to ensure Driver memory stability.
 
 ---
 More weekly tasks and implementations will be added as the internship progresses.
