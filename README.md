@@ -8,7 +8,7 @@ It highlights hands-on work in data cleaning, preprocessing, and analysis using 
 - **Languages:** Python, SQL, PySpark
 - **Big Data & Cloud:** Apache Spark, Azure Data Factory (ADF), Azure Blob Storage
 - **Libraries:** Pandas, NumPy
-- **Tools/Environments:** Google Colab, Jupyter Notebook, VS Code, MySQL Workbench
+- **Tools/Environments:** Databricks, Google Colab, Jupyter Notebook, VS Code, MySQL Workbench
 - **Databases & Data Formats:** MySQL, Parquet, CSV
 
 ## 📅 Week 1 — Pandas Basics & Data Cleaning
@@ -114,6 +114,26 @@ Understand Spark architecture and build an optimized, end-to-end ETL pipeline us
 * **Filter Data** activity isolates high-value records and removes rows with null identity values.
 * **Write Data** activity exports the cleaned and processed DataFrame to a target destination.
 * Pipeline exploration was safely tested and validated using `.show()` to ensure Driver memory stability.
+
+## 📅 Week 7 - Delta Lake & Incremental Data Processing
+
+### Objective 
+Implement incremental data processing (SCD Type 1) using Databricks and Delta Lake to manage daily data updates.
+
+### Work Completed
+* Set up a **Databricks** workspace to handle ACID-compliant data transactions.
+* Created mock datasets (`master` and `incremental`) to simulate daily data ingestion.
+* Built a data cleansing step to remove duplicate primary keys and handle missing values.
+* Converted standard data formats into **Delta Tables** to allow row-level updates (Upserts).
+
+### Pipeline Workflow
+* **Ingest & Clean:** Loaded the raw `customer_master` data, dropped duplicates, and fixed nulls.
+* **Save as Delta:** Stored the clean dataset as a native Delta Table.
+* **Load Incremental:** Ingested the `customer_incremental` payload containing new daily records and updates.
+* **MERGE (Upsert):** Used the Delta API to perform an SCD Type 1 update:
+  * Updated existing customers using `.whenMatchedUpdateAll()`.
+  * Inserted brand-new customers using `.whenNotMatchedInsertAll()`.
+* **Validate:** Queried the final table to mathematically prove there were zero duplicates and all updates were successfully applied.
 
 ---
 More weekly tasks and implementations will be added as the internship progresses.
