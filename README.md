@@ -141,7 +141,7 @@ Implement incremental data processing (SCD Type 1) using Databricks and Delta La
   - Inserted brand-new customers using `.whenNotMatchedInsertAll()`.
 - **Validate:** Queried the final table to mathematically prove there were zero duplicates and all updates were successfully applied.
 
-## 📅 Week 8 - End-to-End E-Commerce Analytics System (CLI)
+## 📅 Week 8 - E-Commerce Analytics System (CLI)
 
 ### Objective
 
